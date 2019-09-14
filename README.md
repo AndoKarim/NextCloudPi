@@ -29,3 +29,9 @@
 	  - It will disable maintenance mode in case it was activated and check if all the access are ok
   15. Check on the UI if everything is ok 
   16. Download the mobile APP and remember to be in the same network as the Rasp
+
+
+## To expose the Rasp to internet
+1. Open the port in your router (NAT). Open Port 80 and 443
+2. Edit */var/www/html/nextcloud/config/config.php* 
+	- Add in the array of hosts the public IP of your router
