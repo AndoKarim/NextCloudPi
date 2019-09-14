@@ -1,4 +1,4 @@
-# How to install NextCloud in Raspberry Pi
+# How to install NextCloud on Raspberry Pi
 
 1. Install Raspbian
 2. Put **ssh** empty file at root
