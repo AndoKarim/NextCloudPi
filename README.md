@@ -1,4 +1,4 @@
-# How to install NextCloud on Raspberry Pi
+# How to install NextCloud in Raspberry Pi
 
 1. Install Raspbian
 2. Put **ssh** empty file at root
@@ -19,12 +19,13 @@
 	  -  `sudo nano /etc/fstab`
 	  - `UUID=********  /path/to/mount ext4  defaults   0       0`
 	   - `sudo mount -a` or just reboot
-  9. Edit the *www/var/html/nextcloud/config/config.php*
+  9. Edit the */var/www/html/nextcloud/config/config.php*
   10. Change **datadirectory** path by the one of your USB drive 
   11. `sudo chown www-data:www-data -R path/of/usb`
-  12. `sudo /etc/init.d/apache2 restart`
-  13. `cd /var/www/html/nextcloud/`
+  12. Move files from the old path to the new one. Old path is */var/www/html/nextcloud/data*
+  13. `sudo /etc/init.d/apache2 restart`
+  14. `cd /var/www/html/nextcloud/`
 	  - `sudo -u www-data php occ maintenance:mode --off`
 	  - It will disable maintenance mode in case it was activated and check if all the access are ok
-  14. Check on the UI if everything is ok 
-  15. Download the mobile APP and remember to be in the same network as the Rasp
+  15. Check on the UI if everything is ok 
+  16. Download the mobile APP and remember to be in the same network as the Rasp
